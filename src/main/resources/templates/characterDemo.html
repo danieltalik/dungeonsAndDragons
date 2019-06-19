@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Character Creator</title>
+</head>
+<body>
+<h1 align="center">Welcome to the Character Demo</h1>
+<p th:text="'Hello, ' +${character.name} + '!'"/>
+<p th:text="'Your Wisdom Modifier is ' + ${character.CharacterClass.CharacterAttributes.getWisdom()+'!'}">Insert Character</p>
+<p th:text="'Throw for attack! '+ ${character.CharacterClass.Attack()}"></p>
+</body>
+</html>
