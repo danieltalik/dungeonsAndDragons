@@ -37,7 +37,9 @@ public class CharController {
     }
     @RequestMapping("/makeCharacters")
     public String makeCharacter(Model model){
+        CharacterClass cc = new Fighter();
         PlayableCharacter pc = new PlayableCharacter();
+        pc.setCharacterClass(cc);
         model.addAttribute("pc",pc);
         return "createPlayer";
     }
